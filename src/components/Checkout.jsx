@@ -9,7 +9,7 @@ const Product = ({
   name,
   availableCount,
   price,
-  orderedQuantity,
+  orderQuantity,
   total,
   incrementHandler,
   decrementHandler,
@@ -17,14 +17,14 @@ const Product = ({
   const totalPrice = total.toFixed(2);
 
   const enabled = total === 0;
-  const disable = availableCount === orderedQuantity
+  const disable = availableCount === orderQuantity
   return (
     <tr>
       <td>{id}</td>
       <td>{name}</td>
       <td>{availableCount}</td>
       <td>${price}</td>
-      <td>{orderedQuantity}</td>
+      <td>{orderQuantity}</td>
       <td>${total.toFixed(2)}</td>
       <td>
         <button
